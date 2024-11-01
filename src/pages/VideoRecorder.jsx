@@ -206,9 +206,7 @@ const VideoRecorder = () => {
 
       const getReportData = async () => {
         try {
-          const dataResponse = await fetch(
-            `http://localhost:3000/api/report/${reportId}`
-          );
+          const dataResponse = await fetch(`${apiUrl}/api/report/${reportId}`);
           const reportData = await dataResponse.json();
           console.log('Polling response:', reportData);
 
